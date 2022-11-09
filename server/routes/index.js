@@ -14,10 +14,10 @@ router.get("/home", indexController.displayHomePage);
 router.get("/about", indexController.displayAboutPage);
 
 /* GET Products page. */
-router.get("/products", indexController.displayProductsPage);
+router.get("/take", indexController.displayTakeSurveyPage);
 
 /* GET Services page. */
-router.get("/services", indexController.displayServicesPage); 
+router.get("/create", indexController.displayCreateSurveyPage); 
 
 /* GET Contact Us page. */
 router.get("/contact", indexController.displayContactPage);

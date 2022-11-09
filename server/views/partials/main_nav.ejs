@@ -1,6 +1,6 @@
 <!-- Main Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">COMP229</a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <h1><a class="navbar-brand" href="/"><img src="Assets/images/ndlogo.png" width="50%" /> NuDev</a></h1>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -16,28 +16,28 @@
           <a class="nav-link" href="/home"><i class="fas fa-lg fa-laptop-house"></i> Home </a>
         </li>
 
-        <% if (title == "About") { %>
+        <% if (title == "About Us") { %>
         <li class="nav-item active">
         <% } else  { %>
         <li class="nav-item">
         <% } %>
-          <a class="nav-link" href="/about"><i class="fas fa-info-circle"></i> About </a>
+          <a class="nav-link" href="/about"><i class="fas fa-info-circle"></i> About Us </a>
         </li>
 
-        <% if (title == "Products") { %>
+        <% if (title == "Take Survey") { %>
         <li class="nav-item active">
         <% } else  { %>
         <li class="nav-item">
         <% } %>
-          <a class="nav-link" href="/products"><i class="fab fa-elementor"></i> Products </a>
+          <a class="nav-link" href="/take"><i class="fab fa-elementor"></i> Take Survey </a>
         </li>
 
-        <% if (title == "Services") { %>
+        <% if (title == "Create Survey") { %>
         <li class="nav-item active">
         <% } else  { %>
         <li class="nav-item">
         <% } %>
-          <a class="nav-link" href="/services"><i class="fas fa-cogs"></i> Services </a>
+          <a class="nav-link" href="/create"><i class="fas fa-cogs"></i> Create Survey </a>
         </li>
 
         <% if (title == "Contact") { %>

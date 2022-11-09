@@ -11,22 +11,22 @@ let User = userModel.User;      //alias
 
 /* GET home page. */
 module.exports.displayHomePage = (req, res, next) => {
-  res.render("index", { title: "Home", displayName: req.user ? req.user.displayName :'' });
+  res.render("home", { title: "Home", displayName: req.user ? req.user.displayName :'' });
 }
 
 /* GET About Us page. */
 module.exports.displayAboutPage = (req, res, next) => {
-    res.render("index", { title: "About", displayName: req.user ? req.user.displayName :'' });
+    res.render("index", { title: "About Us", displayName: req.user ? req.user.displayName :'' });
 }
 
-/* GET Products page. */
-module.exports.displayProductsPage = (req, res, next) => {
-    res.render("index", { title: "Products", displayName: req.user ? req.user.displayName :'' });
+/* GET Take Survey page. */
+module.exports.displayTakeSurveyPage = (req, res, next) => {
+    res.render("index", { title: "Take Survey", displayName: req.user ? req.user.displayName :'' });
 }
 
-/* GET Services page. */
-module.exports.displayServicesPage = (req, res, next) => {
-    res.render("index", { title: "Services", displayName: req.user ? req.user.displayName :'' });
+/* GET Create survey page. */
+module.exports.displayCreateSurveyPage = (req, res, next) => {
+    res.render("index", { title: "Create Survey", displayName: req.user ? req.user.displayName :'' });
 }
 
 /* GET Contact Us page. */
