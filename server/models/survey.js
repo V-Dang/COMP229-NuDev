@@ -6,9 +6,10 @@ let mongoose = require("mongoose");
 //create a model class
 let surveyModel = mongoose.Schema(
     {
+        survey_date: "ISODate",
         survey_title: String,
-        survey_detail: String,
-        survey_remark: String,
+        survey_subject: String,
+        
     },
 
     {
@@ -16,6 +17,6 @@ let surveyModel = mongoose.Schema(
     }
 );
 
-module.exports = mongoose.model('Contact', contactsModel);
+module.exports = mongoose.model('survey', surveyModel);
 
 //THEN create route to connect to book model in route folder
