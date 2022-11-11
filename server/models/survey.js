@@ -1,18 +1,18 @@
-//COMP229-Assignment-2-Vivian-Dang-302278335
+//COMP229-NuDev
 let express = require("express");
 let router = express.Router();
 let mongoose = require("mongoose");
 
 //create a model class
-let contactsModel = mongoose.Schema(
+let surveyModel = mongoose.Schema(
     {
-        c_name: String,
-        c_number: Number,
-        c_email: String,
+        survey_title: String,
+        survey_detail: String,
+        survey_remark: String,
     },
 
     {
-        collection: "contacts",
+        collection: "survey",
     }
 );
 
