@@ -21,7 +21,7 @@ module.exports.displayAboutPage = (req, res, next) => {
 
 /* GET Take Survey page. */
 module.exports.displayTakeSurveyPage = (req, res, next) => {
-    res.render("index", { title: "Take Survey", displayName: req.user ? req.user.displayName :'' });
+    res.render("surveys/list", { title: "Take Survey", displayName: req.user ? req.user.displayName :'' });
 }
 
 /* GET Create survey page. */

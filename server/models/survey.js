@@ -1,4 +1,3 @@
-//COMP229-NuDev
 let express = require("express");
 let router = express.Router();
 let mongoose = require("mongoose");
@@ -6,17 +5,17 @@ let mongoose = require("mongoose");
 //create a model class
 let surveyModel = mongoose.Schema(
     {
-        survey_date: "ISODate",
-        survey_title: String,
-        survey_subject: String,
-        
+        survey_name: String, 
+        survey_subject: String, 
+        // survey_date: {
+        //     type: Date,
+        //     default: Date.now,
+        // },
     },
 
     {
-        collection: "survey",
+        collection: "surveys",
     }
 );
 
-module.exports = mongoose.model('survey', surveyModel);
- 
-//THEN create route to connect to book model in route folder
+module.exports = mongoose.model('Survey', surveyModel);

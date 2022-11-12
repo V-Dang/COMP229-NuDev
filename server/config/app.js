@@ -30,7 +30,9 @@ mongodb.once("open", () => {
 // paths - how app endpoints respond (URIs) to client requests 
 let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
-//let contactsRouter = require("../routes/contacts");       //create contacts route
+let contactsRouter = require("../routes/contacts");       //create contacts route
+let surveyRouter = require("../routes/surveys")
+
 const { allowedNodeEnvironmentFlags } = require('process');
 
 let app = express();
@@ -77,7 +79,8 @@ passport.deserializeUser(User.deserializeUser());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);                         //user router
-//app.use('/contact-list', contactsRouter);               //contact router
+app.use('/contact-list', contactsRouter);   
+app.use('/surveys', surveyRouter)            //contact router
 //app.use('/contact', contactsRouter); 
 
 //------------------------------------------------------------------------------------------------
