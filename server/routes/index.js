@@ -3,6 +3,7 @@ let express = require("express");
 let router = express.Router();
 
 let indexController = require('../controllers/index');
+let surveyController = require('../controllers/surveys')
 
 /* GET home page. */
 router.get("/", indexController.displayHomePage);
@@ -14,7 +15,7 @@ router.get("/home", indexController.displayHomePage);
 router.get("/about", indexController.displayAboutPage);
 
 /* GET Products page. */
-router.get("/take", indexController.displayTakeSurveyPage);
+router.get("/survey", surveyController.displaySurveyList);
 
 /* GET Services page. */
 router.get("/create", indexController.displayCreateSurveyPage); 
