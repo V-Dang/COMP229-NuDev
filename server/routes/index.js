@@ -16,6 +16,7 @@ router.get("/about", indexController.displayAboutPage);
 
 /* GET Products page. */
 router.get("/survey", surveyController.displaySurveyList);
+//router.get("/survey/take", surveyController.displayTakeSurveyPage);
 
 /* GET Services page. */
 router.get("/create", indexController.displayCreateSurveyPage); 

@@ -10,6 +10,8 @@ let passport = require('passport');
 
 let surveyController = require('../controllers/surveys');
 
-//router.get('/', surveyController.displaySurveyList);
+router.get('/', surveyController.displaySurveyList);
+
+router.get('/take/:id', surveyController.displayTakeSurveyPage);
 
 module.exports = router;
