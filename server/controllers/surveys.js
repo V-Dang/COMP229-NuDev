@@ -29,5 +29,17 @@ module.exports.displayTakeSurveyPage = (req, res, next) => {
         } else {
             res.render("surveys/take", {title: Takesurvey.survey_name, takesurvey: Takesurvey, displayName: req.user ? req.user.displayName: ''});
         }
-    })
-}
+    });
+};
+
+module.exports.displayEditSurveyPage = (req, res, next) => {
+    let id = req.params.id;
+        Survey.findById(id, (err, Editsurvey) => {
+            if (err) {
+                console.log(err);
+                res.end(err);
+            } else {
+                res.render("surveys/edit", {title: "Edit Survey Title", editsurvey: Editsurvey, displayName: req.user ? req.user.displayName: ''});         //show edit view
+            }
+        });
+    };

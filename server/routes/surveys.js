@@ -14,4 +14,6 @@ router.get('/', surveyController.displaySurveyList);
 
 router.get('/take/:id', surveyController.displayTakeSurveyPage);
 
+router.get('/edit/:id', surveyController.displayEditSurveyPage);
+
 module.exports = router;
