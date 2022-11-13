@@ -1,0 +1,12 @@
+.hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: url('https://venngage-wordpress.s3.amazonaws.com/uploads/2016/04/survey.png');
+    /* Set a specific height */
+    
+  
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }

@@ -1,9 +1,11 @@
-//COMP229-Assignment-2-Vivian-Dang-302278335
+//COMP229-gorup project
 
-//Must decalre URI, uses book_store database from local
+//Must decalre URI
 module.exports = {
-    //URI: "mongodb://127.0.0.1:27017/assignment2"         //numbers found on listening terminal mongod
-    "URI": "mongodb+srv://user1:LryS3WGEtxzjtFN9@cluster0.dk2giiv.mongodb.net/assignment2"
+        //numbers found on listening terminal mongod
+    //"URI": "mongodb+srv://user1:LryS3WGEtxzjtFN9@cluster0.dk2giiv.mongodb.net/assignment2"
+      
+    "URI":"mongodb+srv://Hussein:YBxK9qpVPFqAwqLM@dbserver.atdtgw9.mongodb.net/survey"
     //user:user1
     //pw:LryS3WGEtxzjtFN9
 };
