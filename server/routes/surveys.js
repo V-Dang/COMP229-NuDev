@@ -13,8 +13,6 @@ let surveyController = require('../controllers/surveys');
 router.get('/', surveyController.displaySurveyList);
 
 router.get('/take/:id', surveyController.displayTakeSurveyPage);
-<<<<<<< HEAD
-=======
 
 router.get('/edit/:id', surveyController.displayEditSurveyPage);
 
@@ -30,6 +28,5 @@ router.post('/edit/:id', surveyController.processEditSurveyPage);
   
   // GET - process the delete - DELETE operation
 router.get("/delete/:id", surveyController.deletepage );
->>>>>>> vd-v1
 
 module.exports = router;
