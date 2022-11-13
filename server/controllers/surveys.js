@@ -2,6 +2,9 @@ let express = require("express");
 let router = express.Router();
 let mongoose = require("mongoose");
 
+
+
+
 //connect to survey model
 let Survey = require("../models/survey");
 //let Survey = surveyModel.Survey 
@@ -43,3 +46,88 @@ module.exports.displayEditSurveyPage = (req, res, next) => {
             }
         });
     };
+
+module.exports.processEditSurveyPage = (req, res, next) => {
+    let id = req.params.id;
+    
+    let updateSurvey = Survey({
+     "_id": id,
+     "survey_name": req.body.survey_name,
+     "survey_subject": req.body.survey_subject,
+     "q1": req.body.q1,
+     "q2": req.body.q2,
+     "q3": req.body.q3,
+    });
+    Survey.updateOne({_id:id}, updateSurvey, (err) => {
+      if(err)
+    {
+        console.log(err);
+        res.end(err);
+    }
+      else
+    {
+        //refresh the survey list
+        res.redirect("/survey");
+    }
+});
+}
+
+
+module.exports.addpage = (req, res, next) => {
+    res.render("surveys/add", {title: "Create a Survey"
+   }); 
+};
+
+   module.exports.addprocesspage = (req, res, next) => {
+    let newSurvey = Survey({
+        "survey_name": req.body.survey_name,
+        "survey_subject": req.body.survey_subject,
+        "q1": req.body.q1,
+        "q2": req.body.q2,
+        "q3": req.body.q3,
+    });
+    Survey.create(newSurvey, (err, survey) => {
+      if(err)
+      {
+        console.log(err);
+        res.end(err);
+      }
+      else
+      {
+        //refresh the Survey list
+        res.redirect("/survey");
+      }
+    });
+  };
+
+module.exports.displayeditpage = (req, res, next) => {
+    let id = req.params.id;
+    Survey.findById(id, (err, surveytoEdit) => {
+      if(err)
+      {
+        console.log(err);
+        res.end(err);
+      }
+      else
+      {
+  // show the edit view
+  res.render("surveys/edit", {title: "Edit Survey", survey:surveytoEdit})
+      }
+    });
+  }; 
+
+module.exports.deletepage = (req, res, next) => {
+    let id = req.params.id;
+    Survey.remove({_id: id}, (err) => {
+    if(err)
+      {
+        console.log(err);
+        res.end(err);
+      }
+      else
+      {
+      //refresh the survey list
+      res.redirect("/survey");
+      }
+  });
+  };
