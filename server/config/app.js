@@ -81,6 +81,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);                         //user router
 app.use('/contact-list', contactsRouter);   
 app.use('/surveys', surveyRouter)            //contact router
+app.use('/survey', surveyRouter)
 //app.use('/contact', contactsRouter); 
 
 //------------------------------------------------------------------------------------------------

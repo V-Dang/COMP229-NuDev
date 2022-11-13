@@ -11,6 +11,9 @@ let surveyModel = mongoose.Schema(
         //     type: Date,
         //     default: Date.now,
         // },
+        q1: String,
+        q2: String,
+        q3: String,
     },
 
     {

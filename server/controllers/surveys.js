@@ -19,3 +19,15 @@ module.exports.displaySurveyList = (req, res, next) => {
         }
     });
 };
+
+module.exports.displayTakeSurveyPage = (req, res, next) => {
+    let id = req.params.id;
+    Survey.findById(id, (err, Takesurvey) => {
+        if (err) {
+            console.log(err);
+            res.end(err);
+        } else {
+            res.render("surveys/take", {title: Takesurvey.survey_name, takesurvey: Takesurvey, displayName: req.user ? req.user.displayName: ''});
+        }
+    })
+}

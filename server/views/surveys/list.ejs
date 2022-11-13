@@ -35,17 +35,21 @@
               <td class="text-centre "><%=SurveyList[count].survey_subject %></td>
               <!-- <td class="text-centre "><%=SurveyList[count].survey_date %></td> -->
               <td class="text-center col-1">
-                <a href="/contact-list/edit/<%= SurveyList[count]._id %>" class="btn btn-primary btn-sm">
-                <i class="fas fa-pencil-alt"></i> Edit</a>
+                <a href="/survey/take/<%= SurveyList[count]._id %>" class="btn btn-primary btn-sm">
+                <i class="fas fa-pencil-alt"></i> Take</a>
             </td>
-            <td class="text-center col-1">
+            <!-- <td class="text-center col-1">
                 <a href="/contact-list/delete/<%= SurveyList[count]._id %>" class="btn btn-danger btn-sm">
                 <i class="fas fa-trash-alt"></i> Delete</a>
-            </td>
+            </td> -->
             <% } else { %>
               <td class="text-centre "><%=SurveyList[count].survey_name %></td>
               <td class="text-centre "><%=SurveyList[count].survey_subject %></td>
               <!-- <td class="text-centre "><%=SurveyList[count].survey_date %></td> -->
+              <td class="text-center col-1">
+                <a href="/survey/take/<%= SurveyList[count]._id %>" class="btn btn-primary btn-sm">
+                <i class="fas fa-pencil-alt"></i> Take</a>
+            </td>
               <% } %>  
             </tr>
           <%}%>

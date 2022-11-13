@@ -57,14 +57,14 @@ module.exports.displayEditPage = (req, res, next) => {
             console.log(err);
             res.end(err);
         } else {
-            res.render("contacts/edit", {title: "Edit Contact", contact: contacttoedit, displayName: req.user ? req.user.displayName: ''});         //show edit view
+            res.render("contacts/edit", {title: "Edit Contact", contact1: contacttoedit, displayName: req.user ? req.user.displayName: ''});         //show edit view
         }
     });
 };
 
 //For processing UPDATE page
 module.exports.processEditPage = (req, res, next) => {
-    let id = req.params.id
+    let id = req.params.id;
 
     let updatedContact = Contact({
         "_id": id,
