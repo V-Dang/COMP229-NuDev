@@ -13,5 +13,23 @@ let surveyController = require('../controllers/surveys');
 router.get('/', surveyController.displaySurveyList);
 
 router.get('/take/:id', surveyController.displayTakeSurveyPage);
+<<<<<<< HEAD
+=======
+
+router.get('/edit/:id', surveyController.displayEditSurveyPage);
+
+router.post('/edit/:id', surveyController.processEditSurveyPage);
+
+  
+  //  GET the Survey Details page in order to add a new Survey
+  router.get("/add", surveyController.addpage);
+  
+  // POST process the Survey  Details page and create a new Survey  - CREATE operation
+  router.post("/add", surveyController.addprocesspage);
+
+  
+  // GET - process the delete - DELETE operation
+router.get("/delete/:id", surveyController.deletepage );
+>>>>>>> vd-v1
 
 module.exports = router;

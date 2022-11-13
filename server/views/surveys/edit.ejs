@@ -8,68 +8,73 @@
 
       <form class="form" method="post">
         <div class="from-group">
-          <label for="nameTextField">Survey Name</label>
-          <input
-            type="text"
-            class="form-control"
-            id="survey_name"
-            placeholder="Enter the Survey Name:"
-            name="survey_name"
-            required
-          />
+            <label for="survey_name">Survey Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="survey_name"
+              placeholder=""
+              name="survey_name"
+              value="<%= editsurvey.survey_name %>"
+              required
+            />
         </div>
 
         <div class="from-group">
-          <label for="authorTextField">Survey Subject</label>
+          <label for="survey_subject">Survey Subject</label>
           <input
             type="text"
             class="form-control"
             id="survey_subject"
-            placeholder="Enter the Subject:"
+            placeholder=""
             name="survey_subject"
+            value="<%= editsurvey.survey_subject %>"
             required
           />
         </div>
 
         <div class="from-group">
-          <label for="authorTextField">Survey question 1</label>
+          <label for="q1">Question 1</label>
           <input
             type="text"
             class="form-control"
             id="q1"
-            placeholder="Enter a Question:"
+            placeholder=""
             name="q1"
+            value="<%= editsurvey.q1 %>"
             required
           />
         </div>
 
         <div class="from-group">
-          <label for="authorTextField">Survey question 2</label>
+          <label for="q2">Question 2</label>
           <input
             type="text"
             class="form-control"
             id="q2"
-            placeholder="Enter a Question:"
+            placeholder=""
             name="q2"
+            value="<%= editsurvey.q2 %>"
             required
           />
         </div>
 
         <div class="from-group">
-          <label for="authorTextField">Survey question 3</label>
+          <label for="q3">Question 3</label>
           <input
             type="text"
             class="form-control"
             id="q3"
-            placeholder="Enter a Question:"
+            placeholder=""
             name="q3"
+            value="<%= editsurvey.q3 %>"
             required
           />
         </div>
 
 
         <button class="btn btn-primary" type="submit">
-          <i class="fas fa-check-square-o"></i>Submit
+          <i class="fas fa-edit"></i>Submit
         </button>
 
         <a href="/survey" class="btn btn-warning">
